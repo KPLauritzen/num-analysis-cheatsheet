@@ -77,6 +77,15 @@ Also centered?
 \subsection{Cubic Splines}
 
 \section{Numerical Differentiation}
+Generally, a $(n+1)$-point formula to approximate $f'(x_{j})$:
+\begin{align*}
+  f'(x_{j}) = \sum_{k=0}^{n}f(x_{k}) L_{k}'(x_{j}) + 
+  \frac{f^{(n+1)}(\xi(x_{j}))}{(n+1)!} \prod_{k=0, k\neq j}^{n}(x_{j}
+  - x_{k})
+\end{align*}
+
+Forward difference, backwards difference. 
+
 n=1,2,4
 
 \section{Numerical Integration}
