@@ -99,7 +99,7 @@ Generally, a $(n+1)$-point formula to approximate $f'(x_{j})$:
   - x_{k})
 \end{align*}
 
-Forward difference, backwards difference. 
+Forward difference, backwards difference, central difference. 
 
 n=1,2,4
 
@@ -119,6 +119,16 @@ with $h=(b-a)/2$, $x_{1}=a+h$.
 A quadrature is of precision $m$ if it is exact for all polynomials of
 degree $k \leq m$. Or Precision(quad) $=m$ iff quad is exact for
 $x^{k} \quad k=0,1,\ldots > m$.
+
+\subsection{Composite Integration}
+Trapezoidal:
+\begin{align*}
+  \int_{a}^{b}f(x)dx = \frac{h}{2}[f(a) + f(b) + 2 \sum_{j=1}^{n}f(x_{j})] -
+  \underbrace{\frac{h^{3}}{12}f''(\xi)}_{\text{error}}
+\end{align*}
+with $h=(b-a)/n$
+Simpsons:
+...
 \section{Truncation Error}
 
 \section{Initial Value Problem}
@@ -149,4 +159,4 @@ Boris knows general formula (from wiki?)
 %%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: t
-%%% End: 
+%%% End: (x-x_{j})
