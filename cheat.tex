@@ -157,6 +157,8 @@ $i=0,1,\ldots, N-1$ the truncation error is
 \begin{align*}
   y' = f(t,y) \quad a<t<b \quad -\infty < y < \infty \quad y(a) = \alpha
 \end{align*}
+Solve analytically by integrating on both sides and applying initial
+conditions. 
 \textbf{Lipschitz}: Guarantees unique solution. 
 $f$ is Lipschitz if
 \begin{align*}
@@ -171,10 +173,22 @@ $f$ is Lipschitz if
 with $t_{n} = t_{0} + nh $
 
 \textbf{Runge-Kutta Method} (of several orders?)
+\begin{align*}
+y_{n+1} &= y_n + \tfrac{1}{6} \left(k_1 + 2k_2 + 2k_3 + k_4 \right)\\
+t_{n+1} &= t_n + h
+\end{align*} with
+\begin{align*}
+k_1 &= hf(t_n, y_n),
+&k_2 = hf(t_n + \tfrac{1}{2}h , y_n +  \tfrac{1}{2} k_1),
+\\
+k_3 &= hf(t_n + \tfrac{1}{2}h , y_n +   \tfrac{1}{2} k_2), 
+&k_4 = hf(t_n + h , y_n + k_3).
+\end{align*}
+\textbf{AB}: Adams-Bashforth are explicit. Reaches order $s$ for $s$
+steps. 
 
-\textbf{AB}: Adams-Bashforth
-
-\textbf{AM}: Adams-Moulton
+\textbf{AM}: Adams-Moulton are implicit. It removes one restriction,
+and allows it to reach order $s+1$ for a $s$ step method. 
 
 One-step methods vs Multi-step methods
 
