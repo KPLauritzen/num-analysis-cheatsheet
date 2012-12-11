@@ -104,10 +104,21 @@ Forward difference, backwards difference.
 n=1,2,4
 
 \section{Numerical Integration}
-Trapezoidal Rule
-
-Simpson's Rule
-
+\subsection{Trapezoidal Rule}
+\begin{align*}
+  \int_{a}^{b}f(x)dx = \frac{h}{2}[f(a) + f(b)] -
+  \underbrace{\frac{h^{3}}{12}f''(\xi)}_{\text{error}}
+\end{align*}
+with $h = b-a$
+\subsection{Simpson's Rule}
+\begin{align*}
+  \int_{a}^{b}f(x)dx = \frac{h}{3}[f(a) +4f(x_{1}) + f(b)] - \underbrace{\frac{h^{5}}{90}f^{(4)}(\xi)}_{\text{error}}  
+\end{align*}
+with $h=(b-a)/2$, $x_{1}=a+h$.
+\subsection{Degree of Accuracy, Precision}
+A quadrature is of precision $m$ if it is exact for all polynomials of
+degree $k \leq m$. Or Precision(quad) $=m$ iff quad is exact for
+$x^{k} \quad k=0,1,\ldots > m$.
 \section{Truncation Error}
 
 \section{Initial Value Problem}
