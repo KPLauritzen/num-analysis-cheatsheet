@@ -119,13 +119,15 @@ Central
 \end{align*}
 
 \section{Numerical Integration}
-\subsection{Trapezoidal Rule}
+\subsection{Simple Quadrature}
+\textbf{Trapezoidal Rule}
 \begin{align*}
   \int_{a}^{b}f(x)dx = \frac{h}{2}[f(a) + f(b)] -
   \underbrace{\frac{h^{3}}{12}f''(\xi)}_{\text{error}}
 \end{align*}
 with $h = b-a$
-\subsection{Simpson's Rule}
+
+\textbf{Simpson's Rule}
 \begin{align*}
   \int_{a}^{b}f(x)dx = \frac{h}{3}[f(a) +4f(x_{1}) + f(b)] - \underbrace{\frac{h^{5}}{90}f^{(4)}(\xi)}_{\text{error}}  
 \end{align*}
@@ -136,14 +138,14 @@ degree $k \leq m$. Or Precision(quad) $=m$ iff quad is exact for
 $x^{k} \quad k=0,1,\ldots > m$.
 
 \subsection{Composite Integration}
-Trapezoidal:
+\textbf{Trapezoidal}:
 \begin{align*}
   \int_{a}^{b}f(x)dx = \frac{h}{2}[f(a) + f(b) + 2 \sum_{j=1}^{n}f(x_{j})] -
   \underbrace{\frac{h^{3}}{12}f''(\xi)}_{\text{error}}
 \end{align*}
 with $h=(b-a)/n$.
 
-Simpsons:
+\textbf{Simpsons}:
 \begin{align*}
 \int_a^b f(x) \, dx\approx 
 \frac{h}{3}\bigg[f(x_0)+2\sum_{j=1}^{n/2-1}f(x_{2j})+
