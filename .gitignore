@@ -1,3 +1,7 @@
 _region_.*
 /cheat.pdf
 /prv_cheat.fmt
+*.aux
+*.log
+*.out
+*.synctex.gz
