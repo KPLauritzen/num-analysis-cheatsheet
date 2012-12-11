@@ -121,7 +121,16 @@ Adams-Moulton
 
 
 \section{Richardson Extrapolation}
-
+\begin{align*}
+  N(h) = M + \underbrace{k_{1}h + k_{2}h^{2} + \ldots}_{\text{error}}
+\end{align*}
+Eliminate leading order of $h$. 
+\begin{align*}
+  N(h/2) &= M + \frac{1}{2}k_{1}h + \frac{1}{4}k_{2}h^{2} + \ldots
+\\
+2 N(h/2) - N(h) &= M + \hat{k_{2}}h^{2} + \ldots = N_{2}(h)
+\end{align*}
+Boris knows general formula (from wiki?)
 
 
 \end{multicols}
