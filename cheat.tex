@@ -148,7 +148,11 @@ Can also be written as
 \end{align*}
 
 \section{Truncation Error}
-
+For $w_{0} = \alpha$ and $w_{i+1} = w_{i} + h\phi(t_{i},w_{i})$ with
+$i=0,1,\ldots, N-1$ the truncation error is
+\begin{align*}
+  \tau_{i+1}(h) = \frac{y(t_{i+1}) - y(t_{i})}{h} - \phi(t_{i},y(t_{i}),h)
+\end{align*}
 \section{Initial Value Problem}
 \begin{align*}
   y' = f(t,y) \quad a<t<b \quad -\infty < y < \infty \quad y(a) = \alpha
