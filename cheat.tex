@@ -99,9 +99,24 @@ Generally, a $(n+1)$-point formula to approximate $f'(x_{j})$:
   - x_{k})
 \end{align*}
 
-Forward difference, backwards difference, central difference. 
+\textbf{For n=1}: Forward difference
+\begin{align*}
+  f'(x) \approx \frac{f(x+h) - f(x)}{h}
+\end{align*}
+Backwards difference
+\begin{align*}
+  f'(x) \approx  f(x) - \frac{f(x-h)}{h}
+\end{align*}
+Central difference
+\begin{align*}
+  f'(x) \approx \frac{f(x+h) - f(x-h)}{2h}
+\end{align*}
 
-n=1,2,4
+\textbf{For n=2}
+Central
+\begin{align*}
+  f''(x) \approx \frac{f(x+h) - 2f(x) + f(x-h)}{h^{2}}
+\end{align*}
 
 \section{Numerical Integration}
 \subsection{Trapezoidal Rule}
