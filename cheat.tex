@@ -126,9 +126,24 @@ Trapezoidal:
   \int_{a}^{b}f(x)dx = \frac{h}{2}[f(a) + f(b) + 2 \sum_{j=1}^{n}f(x_{j})] -
   \underbrace{\frac{h^{3}}{12}f''(\xi)}_{\text{error}}
 \end{align*}
-with $h=(b-a)/n$
+with $h=(b-a)/n$.
+
 Simpsons:
-...
+\begin{align*}
+\int_a^b f(x) \, dx\approx 
+\frac{h}{3}\bigg[f(x_0)+2\sum_{j=1}^{n/2-1}f(x_{2j})+
+4\sum_{j=1}^{n/2}f(x_{2j-1})+f(x_n)
+\bigg]
+\end{align*}
+with $h=(b-a)/n$ and $x_{j} = a +jh$ for $j=0,1,\ldots,
+n-1$. ($x_{0}=a, x_{n}=b)$.
+
+Can also be written as
+\begin{align*}
+\int_a^b f(x) \, dx\approx
+\frac{h}{3}[f(x_{0})+4f(x_1)+2f(x_2)+4f(x_3)+\cdots+f(x_n)]
+\end{align*}
+
 \section{Truncation Error}
 
 \section{Initial Value Problem}
@@ -140,6 +155,7 @@ Adams-Bashforth
 
 Adams-Moulton
 
+One-step methods vs Multi-step methods
 
 \section{Richardson Extrapolation}
 \begin{align*}
