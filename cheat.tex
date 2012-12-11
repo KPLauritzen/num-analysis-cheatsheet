@@ -214,10 +214,18 @@ k_3 &= hf(t_n + \tfrac{1}{2}h , y_n +   \tfrac{1}{2} k_2),
 &k_4 = hf(t_n + h , y_n + k_3).
 \end{align*}
 \textbf{AB}: Adams-Bashforth are explicit. Reaches order $s$ for $s$
-steps. 
-
+steps. Two step:
+\begin{align*}
+  y_{n+1} &= y_n + \tfrac{h}{2} \left[3f(t_n, y_n) - f(t_{n-1}, y_{n-1})\right]\\
+  \tau_{n+1} &= \tfrac{5}{12}y'''(\mu_n)h^2
+\end{align*}
 \textbf{AM}: Adams-Moulton are implicit. It removes one restriction,
-and allows it to reach order $s+1$ for a $s$ step method. 
+and allows it to reach order $s+1$ for a $s$ step method. Two step implicit:
+\begin{align*}
+  y_{n+1} &= y_n + \tfrac{h}{12} \left[5f(t_{n+1}, y_{n+1}) + 8f(t_{n}, y_{n}) - f(t_{n-1}, y_{n-1})\right]\\
+  \tau_{n+1} &= -\tfrac{1}{12}y^{(4)}(\mu_n)h^3
+\end{align*}
+
 
 One-step methods vs Multi-step methods
 
