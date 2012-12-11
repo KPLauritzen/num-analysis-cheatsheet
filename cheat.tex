@@ -147,13 +147,27 @@ Can also be written as
 \section{Truncation Error}
 
 \section{Initial Value Problem}
-Euler's Method
+\begin{align*}
+  y' = f(t,y) \quad a<t<b \quad -\infty < y < \infty \quad y(a) = \alpha
+\end{align*}
+\textbf{Lipschitz}: Guarantees unique solution. 
+$f$ is Lipschitz if
+\begin{align*}
+  \left|\frac{df}{dy}(t,y)\right| \leq L
+\end{align*}
 
-Runge-Kutta Method (of several orders?)
+\textbf{Euler's Method}: We want an approx. of $y$ at $t_{n}$. $y_{n} \approx y(t_{n})$.
+\begin{align*}
+  y(t_{0}) = y_{0}; \quad
+  y_{n+1} = y_{n} + h f(t_{n},y_{n})
+\end{align*}
+with $t_{n} = t_{0} + nh $
 
-Adams-Bashforth
+\textbf{Runge-Kutta Method} (of several orders?)
 
-Adams-Moulton
+\textbf{AB}: Adams-Bashforth
+
+\textbf{AM}: Adams-Moulton
 
 One-step methods vs Multi-step methods
 
