@@ -75,6 +75,21 @@
 Also centered?
 
 \subsection{Cubic Splines}
+Conditions:
+
+\begin{enumerate}
+\item Piecewise cubic polynomial: 
+$S_{j} = a_{j} + b_{j}(x-x_{j}) + c_{j}(x-x_{j})^{2} +
+d_{j}(x-x_{j})^{3}$.
+\item Continuous: $C[x_{0},x_{n}], S_{j+1}(x_{j+1}) = S_{j}(x_{j+1})$. 
+\item 1st derivative is cont.: $C^{1}[x_{0},x_{n}], S_{j+1}'(x_{j+1}) =
+S_{j}'(x_{j+1})$.
+\item 2nd derivative is cont.: $C^{2}[x_{0},x_{n}], S_{j+1}''(x_{j+1}) =
+S_{j}''(x_{j+1})$.
+\item Interpolating: $S_{j}(x_{j}) = f(x_{j})$
+\item Boundary conditions: Natural $S''(x_{0}) = S''(x_{n}) = 0$,
+or Clamped $S'(x_{0}) = f'(x_{0})$ and $S'(x_{n}) = f'(x_{n})$
+\end{enumerate}
 
 \section{Numerical Differentiation}
 Generally, a $(n+1)$-point formula to approximate $f'(x_{j})$:
