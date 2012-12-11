@@ -182,7 +182,26 @@ $f$ is Lipschitz if
 \end{align*}
 with $t_{n} = t_{0} + nh $
 
-\textbf{Runge-Kutta Method} (of several orders?)
+\textbf{Runge-Kutta Methods} (of several orders?)
+
+
+Midpoint Point ($O(h^2)$):
+\begin{align*}
+  y_{n+1} = y_n + h f\left(t_n + \tfrac{h}{2}, y_n + \tfrac{h}{2} f(t_n, y_n)\right)
+\end{align*}
+Modified Euler ($O(h^2)$):
+\begin{align*}
+  y_{n+1} = y_n + \tfrac{h}{2} \left[f(t_n, y_n) + f(t_n, y_n + h f(t_n, y_n))\right]
+\end{align*}
+Heun's ($O(h^3)$):
+\begin{align*}
+  y_{n+1} &= y_i + \tfrac{h}{4}(f(t_i,y_i)\\
+          &+ 3f\left(t_i + \tfrac{2h}{3}, y_i + \tfrac{2h}{3}f \left(
+            t_i + h ,y_i + \tfrac{h}{3}f(t_i,y_i)\right)
+          \right)
+        )
+\end{align*}
+RK4:
 \begin{align*}
 y_{n+1} &= y_n + \tfrac{1}{6} \left(k_1 + 2k_2 + 2k_3 + k_4 \right)\\
 t_{n+1} &= t_n + h
